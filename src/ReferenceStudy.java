@@ -11,7 +11,7 @@ public class ReferenceStudy {
             if ("1".equals(parts[1])) {
                 throw new ReferenceCodeException("This is invalid in our system, because we don’t append “-1” to the first substudy");
             }
-            if (parts[0].length() == 5)
+            if (parts[1].length() < 5)
                 return parts[0];
 
             return referenceCode;
