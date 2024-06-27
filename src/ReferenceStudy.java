@@ -8,4 +8,10 @@ public class ReferenceStudy {
             return referenceCode;
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println(getReferenceCode("K7DTY-BXV6T"));
+        System.out.println(getReferenceCode("K7DTY-BXV6T-2"));
+        System.out.println(getReferenceCode("K7DTY-BXV6T-4"));
+    }
 }
