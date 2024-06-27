@@ -1,6 +1,6 @@
 public class ReferenceStudy {
     public static String getReferenceCode(String referenceCode) throws ReferenceCodeException {
-        referenceCode = referenceCode.replace('/', '-');    // Replace forward slashes with dashes
+        referenceCode = referenceCode.toUpperCase().replace('/', '-');    // Convert to upper case and Replace forward slashes with dashes
 
         String[] parts = referenceCode.split("-");
 
@@ -17,11 +17,16 @@ public class ReferenceStudy {
 
     public static void main(String[] args) throws ReferenceCodeException {
         try {
+            // Initial Testcases
             System.out.println(getReferenceCode("K7DTY-BXV6T"));
             System.out.println(getReferenceCode("K7DTY-BXV6T-2"));
             System.out.println(getReferenceCode("K7DTY-BXV6T-4"));
-            System.out.println(getReferenceCode("K7DTY/BXV6T/5"));
-            System.out.println(getReferenceCode("K7DTY-BXV6T-1"));
+            System.out.println(getReferenceCode("k7dty-bxv6t"));  // Third task testcase
+            System.out.println(getReferenceCode("k7dty-bxv6t-2"));  // Third task testcase
+            System.out.println(getReferenceCode("k7dty-bxv6t-1"));  // Third task testcase
+            System.out.println(getReferenceCode("K7DTY/BXV6T/5"));  // Second task testcase
+            System.out.println(getReferenceCode("K7DTY/BXV6T/1"));  // Second task testcase
+            System.out.println(getReferenceCode("K7DTY-BXV6T-1"));  // First task testcase
         }
         catch (ReferenceCodeException e) {
             System.err.println(e.getMessage());
